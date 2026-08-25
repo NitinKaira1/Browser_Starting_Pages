@@ -28,19 +28,19 @@ Indie Old Internet Vibe
 
 A nostalgic old-web inspired start page with a retro internet aesthetic, pixel-style visuals, and a more experimental feel.
 
-[Add link here]
+[(https://newtabindie.netlify.app/)]
 
 Minimalistic
 
 A lightweight, distraction-free starting page with a clean layout, simple typography, and a focus on usability.
 
-[Add link here]
+[(https://newtabindie.netlify.app/)]
 
 Pixelated
 
 A pixel-art inspired starting page featuring retro computer aesthetics, arcade-style typography, and a nostalgic digital atmosphere.
 
-[Add link here]
+[(https://newtabpixel.netlify.app/)]
 
 Features
 
