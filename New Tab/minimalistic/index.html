@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <button class="settings-button" id="settingsButton" type="button"
+          aria-label="Open settings" aria-expanded="false" title="Settings">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm8.05 3.5c0-.48-.05-.94-.14-1.39l1.7-1.32-1.9-3.29-2.02.82a8.03 8.03 0 0 0-2.4-1.39L15 3.25h-3.8l-.29 2.18a8.03 8.03 0 0 0-2.4 1.39l-2.02-.82-1.9 3.29 1.7 1.32A7.9 7.9 0 0 0 6.15 12c0 .48.05.94.14 1.39l-1.7 1.32 1.9 3.29 2.02-.82a8.03 8.03 0 0 0 2.4 1.39l.29 2.18H15l.29-2.18a8.03 8.03 0 0 0 2.4-1.39l2.02.82 1.9-3.29-1.7-1.32c.09-.45.14-.91.14-1.39Z"/>
+    </svg>
+  </button>
+
+  <main class="clock-container" aria-label="Current time">
+    <div class="clock" id="clock">00:00</div>
+    <div class="date" id="date">Loading</div>
+
+    <div class="shortcuts" id="shortcuts" aria-label="Quick links"></div>
+  </main>
+
+  <div class="settings-backdrop" id="settingsBackdrop" hidden></div>
+
+  <section class="settings-panel" id="settingsPanel"
+           aria-label="Settings" aria-hidden="true">
+    <div class="settings-header">
+      <h2>Settings</h2>
+      <button class="close-button" id="closeSettings" type="button"
+              aria-label="Close settings">&times;</button>
+    </div>
+
+    <div class="settings-content">
+      <aside class="settings-sidebar">
+        <button class="settings-nav active" type="button"
+                data-panel="theme" aria-current="page">
+          <span class="nav-icon">◐</span>
+          <span>Theme</span>
+        </button>
+        <button class="settings-nav" type="button" data-panel="time-format">
+          <span class="nav-icon">◷</span>
+          <span>Time Format</span>
+        </button>
+      </aside>
+
+      <div class="settings-main">
+        <div class="settings-pane active" id="pane-theme">
+          <h3>Theme</h3>
+          <p class="settings-description">Choose how the clock should look.</p>
+
+          <div class="theme-options" role="radiogroup" aria-label="Theme">
+            <button class="theme-option" data-theme-choice="system" role="radio"
+                    aria-checked="false" type="button">
+              <span class="theme-preview system-preview"></span>
+              <span class="theme-label">
+                <strong>System</strong>
+                <small>Follow your device</small>
+              </span>
+            </button>
+
+            <button class="theme-option" data-theme-choice="light" role="radio"
+                    aria-checked="false" type="button">
+              <span class="theme-preview light-preview"></span>
+              <span class="theme-label">
+                <strong>Light</strong>
+                <small>Always use light mode</small>
+              </span>
+            </button>
+
+            <button class="theme-option" data-theme-choice="dark" role="radio"
+                    aria-checked="false" type="button">
+              <span class="theme-preview dark-preview"></span>
+              <span class="theme-label">
+                <strong>Dark</strong>
+                <small>Always use dark mode</small>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <div class="settings-pane" id="pane-time-format" hidden>
+          <h3>Time Format</h3>
+          <p class="settings-description">Choose how the clock displays hours.</p>
+
+          <div class="theme-options" role="radiogroup" aria-label="Time Format">
+            <button class="theme-option" data-format-choice="24" role="radio"
+                    aria-checked="false" type="button">
+              <span class="theme-preview format-preview">24</span>
+              <span class="theme-label">
+                <strong>24-hour</strong>
+                <small>e.g. 14:05</small>
+              </span>
+            </button>
+
+            <button class="theme-option" data-format-choice="12" role="radio"
+                    aria-checked="false" type="button">
+              <span class="theme-preview format-preview">12</span>
+              <span class="theme-label">
+                <strong>12-hour</strong>
+                <small>e.g. 2:05 PM</small>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="shortcut-backdrop" id="shortcutBackdrop" hidden></div>
+
+  <div class="shortcut-dialog" id="shortcutDialog" role="dialog"
+       aria-label="Add shortcut" aria-hidden="true">
+    <h3>Add shortcut</h3>
+
+    <label class="shortcut-field">
+      <span>Name</span>
+      <input type="text" id="shortcutName" placeholder="e.g. GitHub" maxlength="20">
+    </label>
+
+    <label class="shortcut-field">
+      <span>URL</span>
+      <input type="url" id="shortcutUrl" placeholder="https://github.com">
+    </label>
+
+    <div class="shortcut-dialog-actions">
+      <button type="button" class="shortcut-btn" id="cancelShortcut">Cancel</button>
+      <button type="button" class="shortcut-btn primary" id="saveShortcut">Add</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
