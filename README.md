@@ -34,7 +34,7 @@ Minimalistic
 
 A lightweight, distraction-free starting page with a clean layout, simple typography, and a focus on usability.
 
-[(https://newtabindie.netlify.app/)]
+[(https://newtabminimal.netlify.app/)]
 
 Pixelated
 
