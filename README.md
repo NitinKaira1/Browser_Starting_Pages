@@ -16,7 +16,7 @@ CUBE
 
 A 3D interactive browser start page built around a rotating cube interface, with different faces for useful tools and information.
 
-[Add link here]
+[(https://newtabcube.netlify.app/)]
 
 Default
 
