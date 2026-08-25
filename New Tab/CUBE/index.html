@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cube Start Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+    <!-- =================================================
+         3D CUBE
+    ================================================== -->
+
+    <div class="scene">
+
+        <div class="cube" id="cube">
+
+
+            <!-- =================================================
+                 FRONT — CLOCK
+            ================================================== -->
+
+            <section class="face front">
+
+                <div class="face-content clock-face">
+
+                    <div class="eyebrow">
+                        LOCAL TIME
+                    </div>
+
+                    <div
+                        class="clock"
+                        id="clock"
+                    >
+                        00:00
+                    </div>
+
+                    <div
+                        class="date"
+                        id="date"
+                    >
+                        Loading
+                    </div>
+
+                    <div class="hint">
+                        Right-click + drag anywhere outside a control
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 BACK — SHORTCUTS
+            ================================================== -->
+
+            <section class="face back">
+
+                <div class="face-content">
+
+                    <div class="eyebrow">
+                        QUICK ACCESS
+                    </div>
+
+                    <h1>
+                        Shortcuts
+                    </h1>
+
+                    <div
+                        class="shortcuts"
+                        id="shortcuts"
+                    ></div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RIGHT — SETTINGS
+            ================================================== -->
+
+            <section class="face right">
+
+                <div class="face-content settings-face">
+
+                    <div class="eyebrow">
+                        CONTROL
+                    </div>
+
+
+                    <button
+                        class="settings-button interactive"
+                        id="settingsButton"
+                        type="button"
+                        aria-label="Open settings"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm8.05 3.5c0-.48-.05-.94-.14-1.39l1.7-1.32-1.9-3.29-2.02.82a8.03 8.03 0 0 0-2.4-1.39L15 3.25h-3.8l-.29 2.18a8.03 8.03 0 0 0-2.4 1.39l-2.02-.82-1.9 3.29 1.7 1.32A7.9 7.9 0 0 0 6.15 12c0 .48.05.94.14 1.39l-1.7 1.32 1.9 3.29 2.02-.82a8.03 8.03 0 0 0 2.4 1.39l.29 2.18H15l.29-2.18a8.03 8.03 0 0 0 2.4-1.39l2.02.82 1.9-3.29-1.7-1.32c.09-.45.14-.91.14-1.39Z"/>
+
+                        </svg>
+
+                    </button>
+
+
+                    <h1>
+                        Settings
+                    </h1>
+
+
+                    <p>
+                        Change appearance and
+                        clock preferences.
+                    </p>
+
+
+                    <button
+                        class="open-settings-text interactive"
+                        id="openSettingsText"
+                        type="button"
+                    >
+                        Open settings
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 LEFT — WIKIPEDIA
+            ================================================== -->
+
+            <section class="face left">
+
+                <div class="face-content wikipedia-face">
+
+                    <div class="eyebrow">
+                        DISCOVER
+                    </div>
+
+
+                    <div class="wiki-symbol">
+                        W
+                    </div>
+
+
+                    <h1>
+                        Wikipedia
+                    </h1>
+
+
+                    <p>
+                        Discover something
+                        completely random.
+                    </p>
+
+
+                    <button
+                        class="lucky-button interactive"
+                        id="luckyButton"
+                        type="button"
+                    >
+
+                        <span>
+                            I'm Feeling Lucky
+                        </span>
+
+                        <b>
+                            ↗
+                        </b>
+
+                    </button>
+
+
+                    <div class="wiki-subtext">
+                        Opens a random Wikipedia article
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 TOP — CALENDAR
+            ================================================== -->
+
+            <section class="face top">
+
+                <div class="face-content calendar-face">
+
+                    <div class="eyebrow">
+                        TODAY
+                    </div>
+
+
+                    <div
+                        class="big-day"
+                        id="bigDay"
+                    >
+                        MON
+                    </div>
+
+
+                    <div
+                        class="big-date"
+                        id="bigDate"
+                    >
+                        00
+                    </div>
+
+
+                    <div
+                        class="big-month"
+                        id="bigMonth"
+                    >
+                        MONTH
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 BOTTOM — RANDOM QUOTES
+            ================================================== -->
+
+            <section class="face bottom">
+
+                <div class="face-content quote-face">
+
+                    <div class="eyebrow">
+                        RANDOM THOUGHT
+                    </div>
+
+
+                    <div class="quote-mark">
+                        “
+                    </div>
+
+
+                    <div
+                        class="quote-text"
+                        id="quoteText"
+                    >
+                        Believe in yourself.
+                    </div>
+
+
+                    <div
+                        class="quote-author"
+                        id="quoteAuthor"
+                    >
+                        — Unknown
+                    </div>
+
+
+                    <button
+                        class="quote-button interactive"
+                        id="quoteButton"
+                        type="button"
+                    >
+                        Another one
+                    </button>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         SETTINGS BACKDROP
+    ================================================== -->
+
+    <div
+        class="settings-backdrop"
+        id="settingsBackdrop"
+        hidden
+    ></div>
+
+
+
+    <!-- =================================================
+         SETTINGS PANEL
+    ================================================== -->
+
+    <section
+        class="settings-panel"
+        id="settingsPanel"
+        aria-hidden="true"
+    >
+
+        <div class="settings-header">
+
+            <h2>
+                Settings
+            </h2>
+
+
+            <button
+                class="close-button"
+                id="closeSettings"
+                type="button"
+                aria-label="Close settings"
+            >
+                &times;
+            </button>
+
+        </div>
+
+
+
+        <div class="settings-content">
+
+
+            <aside class="settings-sidebar">
+
+                <button
+                    class="settings-nav active"
+                    data-panel="theme"
+                    type="button"
+                >
+
+                    <span class="nav-icon">
+                        ◐
+                    </span>
+
+                    Theme
+
+                </button>
+
+
+                <button
+                    class="settings-nav"
+                    data-panel="time-format"
+                    type="button"
+                >
+
+                    <span class="nav-icon">
+                        ◷
+                    </span>
+
+                    Time Format
+
+                </button>
+
+            </aside>
+
+
+
+            <div class="settings-main">
+
+
+                <!-- THEME -->
+
+                <div
+                    class="settings-pane active"
+                    id="pane-theme"
+                >
+
+                    <h3>
+                        Theme
+                    </h3>
+
+
+                    <p class="settings-description">
+                        Choose how the cube should look.
+                    </p>
+
+
+                    <div class="theme-options">
+
+
+                        <button
+                            class="theme-option"
+                            data-theme-choice="system"
+                            type="button"
+                        >
+
+                            <span
+                                class="theme-preview system-preview"
+                            ></span>
+
+
+                            <span class="theme-label">
+
+                                <strong>
+                                    System
+                                </strong>
+
+                                <small>
+                                    Follow your device
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+
+                        <button
+                            class="theme-option"
+                            data-theme-choice="light"
+                            type="button"
+                        >
+
+                            <span
+                                class="theme-preview light-preview"
+                            ></span>
+
+
+                            <span class="theme-label">
+
+                                <strong>
+                                    Light
+                                </strong>
+
+                                <small>
+                                    Always use light mode
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+
+                        <button
+                            class="theme-option"
+                            data-theme-choice="dark"
+                            type="button"
+                        >
+
+                            <span
+                                class="theme-preview dark-preview"
+                            ></span>
+
+
+                            <span class="theme-label">
+
+                                <strong>
+                                    Dark
+                                </strong>
+
+                                <small>
+                                    Always use dark mode
+                                </small>
+
+                            </span>
+
+                        </button>
+
+                        <button
+                            class="theme-option"
+                            data-theme-choice="glass"
+                            type="button"
+                        >
+                            <span class="theme-preview glass-preview"></span>
+                            <span class="theme-label">
+                                <strong>Glassmorphism</strong>
+                                <small>Frosted glass + blur</small>
+                            </span>
+                        </button>
+
+                        <button
+                            class="theme-option"
+                            data-theme-choice="neo"
+                            type="button"
+                        >
+                            <span class="theme-preview neo-preview"></span>
+                            <span class="theme-label">
+                                <strong>Neumorphism</strong>
+                                <small>Soft raised surfaces</small>
+                            </span>
+                        </button>
+
+                        <button
+                            class="theme-option"
+                            data-theme-choice="brutal"
+                            type="button"
+                        >
+                            <span class="theme-preview brutal-preview"></span>
+                            <span class="theme-label">
+                                <strong>Brutalism</strong>
+                                <small>Raw blocks + hard edges</small>
+                            </span>
+                        </button>
+
+                        <button
+                            class="theme-option"
+                            data-theme-choice="clay"
+                            type="button"
+                        >
+                            <span class="theme-preview clay-preview"></span>
+                            <span class="theme-label">
+                                <strong>Claymorphism</strong>
+                                <small>Soft clay-like UI</small>
+                            </span>
+                        </button>
+
+                        <button
+                            class="theme-option"
+                            data-theme-choice="transparent"
+                            type="button"
+                        >
+                            <span
+                                class="theme-preview transparent-preview"
+                            ></span>
+
+                            <span class="theme-label">
+                                <strong>
+                                    Transparent Cube
+                                </strong>
+
+                                <small>
+                                    See-through glass cube
+                                </small>
+                            </span>
+                        </button>
+
+                        <button
+                            class="theme-option"
+                            data-theme-choice="material"
+                            type="button"
+                        >
+                            <span class="theme-preview material-preview"></span>
+                            <span class="theme-label">
+                                <strong>Material</strong>
+                                <small>Elevation + clean surfaces</small>
+                            </span>
+                        </button>
+
+                        <button
+                            class="theme-option"
+                            data-theme-choice="retro"
+                            type="button"
+                        >
+                            <span class="theme-preview retro-preview"></span>
+                            <span class="theme-label">
+                                <strong>Retro</strong>
+                                <small>Warm vintage computer feel</small>
+                            </span>
+                        </button>
+
+                        <button
+                            class="theme-option"
+                            data-theme-choice="cyberpunk"
+                            type="button"
+                        >
+                            <span class="theme-preview cyberpunk-preview"></span>
+                            <span class="theme-label">
+                                <strong>Cyberpunk</strong>
+                                <small>Neon futuristic UI</small>
+                            </span>
+                        </button>
+
+                        <button
+                            class="theme-option"
+                            data-theme-choice="vaporwave"
+                            type="button"
+                        >
+                            <span class="theme-preview vaporwave-preview"></span>
+                            <span class="theme-label">
+                                <strong>Vaporwave</strong>
+                                <small>80s neon + gradient</small>
+                            </span>
+                        </button>
+
+                        <button
+                            class="theme-option"
+                            data-theme-choice="aurora"
+                            type="button"
+                        >
+                            <span class="theme-preview aurora-preview"></span>
+                            <span class="theme-label">
+                                <strong>Aurora</strong>
+                                <small>Colorful atmospheric glow</small>
+                            </span>
+                        </button>
+
+                        <button
+                            class="theme-option"
+                            data-theme-choice="terminal"
+                            type="button"
+                        >
+                            <span class="theme-preview terminal-preview"></span>
+                            <span class="theme-label">
+                                <strong>Terminal</strong>
+                                <small>Monospace hacker aesthetic</small>
+                            </span>
+                        </button>
+
+                        <button
+                            class="theme-option"
+                            data-theme-choice="y2k"
+                            type="button"
+                        >
+                            <span class="theme-preview y2k-preview"></span>
+                            <span class="theme-label">
+                                <strong>Y2K</strong>
+                                <small>Chrome + playful digital</small>
+                            </span>
+                        </button>
+
+                        <button
+                            class="theme-option"
+                            data-theme-choice="paper"
+                            type="button"
+                        >
+                            <span class="theme-preview paper-preview"></span>
+                            <span class="theme-label">
+                                <strong>Paper</strong>
+                                <small>Editorial paper texture</small>
+                            </span>
+                        </button>
+
+                        <button
+                            class="theme-option"
+                            data-theme-choice="mono"
+                            type="button"
+                        >
+                            <span class="theme-preview mono-preview"></span>
+                            <span class="theme-label">
+                                <strong>Monochrome</strong>
+                                <small>Pure black + white</small>
+                            </span>
+                        </button>
+
+                        <button
+                            class="theme-option"
+                            data-theme-choice="minimal"
+                            type="button"
+                        >
+                            <span class="theme-preview minimal-preview"></span>
+                            <span class="theme-label">
+                                <strong>Minimal</strong>
+                                <small>Ultra-clean whitespace</small>
+                            </span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TIME FORMAT -->
+
+                <div
+                    class="settings-pane"
+                    id="pane-time-format"
+                    hidden
+                >
+
+                    <h3>
+                        Time Format
+                    </h3>
+
+
+                    <p class="settings-description">
+                        Choose how the clock displays hours.
+                    </p>
+
+
+                    <div class="theme-options">
+
+
+                        <button
+                            class="theme-option"
+                            data-format-choice="24"
+                            type="button"
+                        >
+
+                            <span class="theme-preview format-preview">
+                                24
+                            </span>
+
+
+                            <span class="theme-label">
+
+                                <strong>
+                                    24-hour
+                                </strong>
+
+                                <small>
+                                    e.g. 14:05
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+
+                        <button
+                            class="theme-option"
+                            data-format-choice="12"
+                            type="button"
+                        >
+
+                            <span class="theme-preview format-preview">
+                                12
+                            </span>
+
+
+                            <span class="theme-label">
+
+                                <strong>
+                                    12-hour
+                                </strong>
+
+                                <small>
+                                    e.g. 2:05 PM
+                                </small>
+
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SHORTCUT DIALOG
+    ================================================== -->
+
+    <div
+        class="shortcut-backdrop"
+        id="shortcutBackdrop"
+        hidden
+    ></div>
+
+
+    <div
+        class="shortcut-dialog"
+        id="shortcutDialog"
+        aria-hidden="true"
+    >
+
+        <h3>
+            Add shortcut
+        </h3>
+
+
+        <label class="shortcut-field">
+
+            <span>
+                Name
+            </span>
+
+            <input
+                type="text"
+                id="shortcutName"
+                placeholder="e.g. GitHub"
+                maxlength="20"
+            >
+
+        </label>
+
+
+        <label class="shortcut-field">
+
+            <span>
+                URL
+            </span>
+
+            <input
+                type="url"
+                id="shortcutUrl"
+                placeholder="https://github.com"
+            >
+
+        </label>
+
+
+        <div class="shortcut-dialog-actions">
+
+            <button
+                class="shortcut-btn"
+                id="cancelShortcut"
+                type="button"
+            >
+                Cancel
+            </button>
+
+
+            <button
+                class="shortcut-btn primary"
+                id="saveShortcut"
+                type="button"
+            >
+                Add
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
