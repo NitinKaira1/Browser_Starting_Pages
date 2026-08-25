@@ -22,7 +22,7 @@ Default
 
 A clean and simple starting page focused on the essentials: clock, date, shortcuts, and basic customization.
 
-[(newtabdefault.netlify.app)]
+[(newtabdefault.netlify.app/)]
 
 Indie Old Internet Vibe
 
